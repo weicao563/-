@@ -42,7 +42,7 @@ public class JdbcTest {
         httpPost.addHeader("account","weic");
         httpPost.addHeader("Content-Type","application/json");
         List<BasicNameValuePair> lst = new ArrayList<BasicNameValuePair>();
-        lst.add(new BasicNameValuePair("reportName","商城用户行为"));
+        lst.add(new BasicNameValuePair("reportName","车辆行程报表"));
 
         try {
             UrlEncodedFormEntity un = new UrlEncodedFormEntity(lst,"UTF-8");
