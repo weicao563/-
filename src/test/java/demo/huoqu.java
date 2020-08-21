@@ -16,10 +16,10 @@ import java.io.IOException;
 public class huoqu {
     @Test
     public void huoqu1(){
-        String exp = "18629369721";
+        String exp = "18917832018";
         CloseableHttpClient client = HttpClients.createDefault();
 
-        HttpGet get = new HttpGet("http://10.100.13.4:8001/urm/account/getUserByMobile?mobile=18629369721");
+        HttpGet get = new HttpGet("http://10.100.13.4:8001/urm/account/getUserByMobile?mobile=18917832018");
         get.addHeader("Content-Type","application/json");
         get.addHeader("account","admin");
         try {
