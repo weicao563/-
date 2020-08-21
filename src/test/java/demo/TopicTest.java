@@ -27,9 +27,9 @@ public class TopicTest {
 
     @Test
     public void Topic()  {
-        String exp = "016586a6-f33f-4f96-a823-7340e46dc30b";
+        String exp = "06_商城用户行为";
         JDBCTools.createConnection();
-       CloseableHttpClient client =  HttpClients.createDefault();
+        CloseableHttpClient client =  HttpClients.createDefault();
         HttpPost post = new HttpPost("http://10.100.13.130:8099/index/getAllReportMessage");
         List<NameValuePair> lst = new ArrayList<NameValuePair>();
         post.addHeader("account","weic");
@@ -47,15 +47,12 @@ public class TopicTest {
             String re = EntityUtils.toString (response.getEntity());
             //System.err.println(re);
             JSONObject obj = JSON.parseObject(re);
-            String s = TestUtil.getValueByJPath(obj,"data[0]/reportId");
+            String s = TestUtil.getValueByJPath(obj,"data[0]/reportName");
             System.err.println(s);
             if(!s.equals(exp)){
                 assert false;
                 return ;
             }
-
-
-
 
         } catch (Exception e) {
             e.printStackTrace();
