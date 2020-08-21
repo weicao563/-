@@ -18,7 +18,6 @@ import java.util.List;
 
 public class JdbcTest {
 
-
     @Test
     public void Updataindex(){
 
