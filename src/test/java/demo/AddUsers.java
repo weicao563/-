@@ -63,7 +63,6 @@ public class AddUsers {
             int entity = re.getStatusLine().getStatusCode();
             if (entity != 200) {
                 assert false;
-               log.error("测试失败" + "测试编号为" + bh);
             }
 
 
