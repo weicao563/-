@@ -131,7 +131,8 @@
 
 
     <properties>
-            <xmlFileName>testng.xml</xmlFileName>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <xmlFileName>testng.xml</xmlFileName>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -146,7 +147,7 @@
                 <version>2.12.4</version>
                 <configuration> <!-- maven-surefire-plugin具体的配置 -->
                     <suiteXmlFiles>  <!-- 该标签中声明 运行 哪些测试套件 -->
-                        <suiteXmlFile>res/file/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>res/${xmlFileName}</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
 
