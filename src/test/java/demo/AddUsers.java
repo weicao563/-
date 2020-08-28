@@ -20,7 +20,7 @@ import java.util.List;
 public class AddUsers {
     @DataProvider
     public Object[][] data(){
-        Object[][] obj= ExcelUtils.read("res/test_data.xlsx",1,2,4,1,21);
+        Object[][] obj= ExcelUtils.read("C:/Users/weicao/Desktop/test_data.xlsx",1,2,4,1,21);
         return obj;
     }
 

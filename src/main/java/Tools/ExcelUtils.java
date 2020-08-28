@@ -65,7 +65,7 @@ public class ExcelUtils {
 
     @Test
     public void testGetData() {
-        Object[][] obj = ExcelUtils.read("res/test_data.xlsx",1,2,5,1,5);
+        Object[][] obj = ExcelUtils.read("C:/Users/weicao/Desktop/test_data.xlsx",1,2,5,1,5);
         for (Object[] objects : obj) {
             System.out.println(Arrays.toString(objects));
         }
