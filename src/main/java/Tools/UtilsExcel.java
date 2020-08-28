@@ -45,7 +45,7 @@ public class UtilsExcel {
             Sheet sheet = workbook.getSheetAt(sheetNum - 1);
             int lastRowNum = sheet.getLastRowNum();
             int physicalNumberOfCells = sheet.getRow(0).getPhysicalNumberOfCells();
-            for (int i = 1; i < lastRowNum; i++) {
+            for (int i = 0; i < lastRowNum; i++) {
                 Row row = sheet.getRow(i);
                 if (row.getCell(0)!= null && row.getCell(0).toString().equals("") && rowCount == 0) {
                     rowCount = i-1;
@@ -77,7 +77,7 @@ public class UtilsExcel {
 
     @Test
     public void testGetData() {
-        Object[][] obj = UtilsExcel.read("/interface.xlsx",1);
+        Object[][] obj = UtilsExcel.read("C:/Users/weicao/Desktop/test_data.xlsx",1);
         for (Object[] objects : obj) {
             System.out.println(Arrays.toString(objects));
         }

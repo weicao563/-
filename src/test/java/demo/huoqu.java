@@ -36,7 +36,6 @@ public class huoqu {
            System.err.println(s);
             if(!s.equals(exp)){
                 assert false;
-
             }
 
 
