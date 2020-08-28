@@ -14,7 +14,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.qa.base.TestBase;
 import com.qa.restclient.RestClient;
 import com.qa.util.TestUtil;
-import com.qa.Log4jUtils;
 
 public class GetApiTest extends TestBase {
     TestBase testBase;
