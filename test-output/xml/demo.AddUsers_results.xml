@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.221">
+           time="0.870">
   <properties />
   
   
-            <testcase name="addu" time="0.143" classname="demo.AddUsers" />
-                <testcase name="addu" time="0.231" classname="demo.AddUsers" />
-                <testcase name="addu" time="0.847" classname="demo.AddUsers" />
+            <testcase name="addu" time="0.820" classname="demo.AddUsers" />
+                <testcase name="addu" time="0.023" classname="demo.AddUsers" />
+                <testcase name="addu" time="0.027" classname="demo.AddUsers" />
       
 </testsuite>

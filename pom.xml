@@ -9,166 +9,185 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>autoInterface</name>
-    <url>http://maven.apache.org</url>
+<url>http://maven.apache.org</url>
 
-    <dependencies>
-        <!--用来操作excel数据-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <!--用来操作excel数据-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>4.0.1</version>
-        </dependency>
+<dependencies>
+    <!--        gson-->
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.8.5</version>
+    </dependency>
+    <!--        httpclient-->
+    <dependency>
+        <groupId>commons-httpclient</groupId>
+        <artifactId>commons-httpclient</artifactId>
+        <version>3.1</version>
+    </dependency>
+<!--用来操作excel数据-->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.0.1</version>
+</dependency>
+<!--用来操作excel数据-->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.0.1</version>
+</dependency>
 
-        <!--httpclient包，用来 模拟http请求 -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.2</version>
-        </dependency>
+<!--httpclient包，用来 模拟http请求 -->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.2</version>
+</dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.9.10</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>RELEASE</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.27</version>
+    <optional>true</optional>
+</dependency>
+
+<dependency>
+    <groupId>com.simple</groupId>
+    <artifactId>util</artifactId>
+    <version>1.3.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+<dependency>
+    <groupId>joda-time</groupId>
+    <artifactId>joda-time</artifactId>
+    <version>2.9.9</version>
+</dependency>
+
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.16.10</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.38</version>
+</dependency>
+
+
+<!--依赖 maven-surefire插件进行 运行测试案例管理 -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.12.4</version>
+</dependency>
+
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.15</version>
+</dependency>
+
+<!--依赖 org.uncommons进行美化结果报告 -->
+<dependency>
+    <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.4</version>
+    <exclusions>
+        <!-- 排除testNG依赖 -->
+        <exclusion>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.9.10</version>
-        </dependency>
+        </exclusion>
+    </exclusions>
+</dependency>
 
-        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
+<!--依赖 com.google.inject进行美化结果报告 -->
+<dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>3.0</version>
+</dependency>
 
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
-        </dependency>
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.0-BETA21</version>
+</dependency>
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.27</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.simple</groupId>
-            <artifactId>util</artifactId>
-            <version>1.3.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.9.9</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
-        </dependency>
-
-
-        <!--依赖 maven-surefire插件进行 运行测试案例管理 -->
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.12.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.15</version>
-        </dependency>
-
-        <!--依赖 org.uncommons进行美化结果报告 -->
-        <dependency>
-            <groupId>org.uncommons</groupId>
-            <artifactId>reportng</artifactId>
-            <version>1.1.4</version>
-            <exclusions>
-                <!-- 排除testNG依赖 -->
-                <exclusion>
-                    <groupId>org.testng</groupId>
-                    <artifactId>testng</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <!--依赖 com.google.inject进行美化结果报告 -->
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>3.0</version>
-        </dependency>
-    </dependencies>
+</dependencies>
 
 
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <xmlFileName>testng.xml</xmlFileName>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+<properties>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<xmlFileName>testng.xml</xmlFileName>
+<maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 
-    <!--构建项目 -->
-    <build>
-        <plugins>   <!-- 给出构建过程中所用到的插件。 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!--此处maven-surefire-plugin表示构建和运行项目时需要用到该插件 -->
-                <version>2.12.4</version>
-                <configuration> <!-- maven-surefire-plugin具体的配置 -->
-                    <suiteXmlFiles>  <!-- 该标签中声明 运行 哪些测试套件 -->
-                        <suiteXmlFile>res/${xmlFileName}</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <properties>
+        <!--构建项目 -->
+<build>
+<plugins>   <!-- 给出构建过程中所用到的插件。 -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <!--此处maven-surefire-plugin表示构建和运行项目时需要用到该插件 -->
+        <version>2.12.4</version>
+        <configuration> <!-- maven-surefire-plugin具体的配置 -->
+            <suiteXmlFiles>  <!-- 该标签中声明 运行 哪些测试套件 -->
+                <suiteXmlFile>res/${xmlFileName}</suiteXmlFile>
+            </suiteXmlFiles>
+            <properties>
 
-                        <property>
-                            <name>usedefaultlisteners</name>  <!--关闭默认的testng结果报告 -->
-                            <value>false</value>
-                        </property>
+                <property>
+                    <name>usedefaultlisteners</name>  <!--关闭默认的testng结果报告 -->
+                    <value>false</value>
+                </property>
 
-                        <!-- 使用reportng的结果报告，并且生成的格式为HTMLReporter和JUnitXMLReporter两种 -->
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
-                        </property>
-                    </properties>
-                    <workingDirectory>target/</workingDirectory>
-                    <forkMode>always</forkMode>
-                </configuration>
+                <!-- 使用reportng的结果报告，并且生成的格式为HTMLReporter和JUnitXMLReporter两种 -->
+                <property>
+                    <name>listener</name>
+                    <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+                </property>
+            </properties>
+            <workingDirectory>target/</workingDirectory>
+            <forkMode>always</forkMode>
+        </configuration>
 
-            </plugin>
+    </plugin>
 
-        </plugins>
-    </build>
+</plugins>
+</build>
 
-</project>
+        </project>

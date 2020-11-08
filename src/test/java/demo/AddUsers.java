@@ -14,7 +14,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class AddUsers {
@@ -26,14 +28,19 @@ public class AddUsers {
 
 
 @Test(dataProvider="data")
-    public void addu(String md, String bh, String address, String bigRegion, String childredState, String id, String idCard, String mobile,
+    public static void addu(String md, String bh, String address, String bigRegion, String childredState, String id, String idCard, String mobile,
                         String name, String ownCar, String partnerCode, String partnerName, String regProvince,
                         String regStrict, String sex, String userSource, String userSource_2, String userSource_3,
                         String userType, String regCity , String exp){
         CloseableHttpClient cl = HttpClients.createDefault();
+        Logger logger = Log4jUtils.getLogger(AddUsers.class);
+        logger.info("测试开始：测试用例编号："+md+"测试目的是"+bh);
         HttpPost post = new HttpPost("http://10.100.13.4:8001/urm/account/addAccount");
-        post.addHeader("Content-Type", "application/json;charset=utf8");
-        post.addHeader("admin", "admin");
+   // HashMap<String,String> ha = new HashMap<String,String>();
+   // ha.put("Content-Type","application/json;charset=utf8");
+  //  ha.put("admin","admin");
+        //post.addHeader("Content-Type", "application/json;charset=utf8");
+       // post.addHeader("admin", "admin");
         List<NameValuePair> lst = new ArrayList<NameValuePair>();
         lst.add(new BasicNameValuePair("address", address));
         lst.add(new BasicNameValuePair("bigRegion", bigRegion));
